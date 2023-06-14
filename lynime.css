@@ -27,7 +27,14 @@ body{
 
 }
 
+header{
+    position: sticky;
+    background-color: #ffffff10;
+    overflow-wrap: normal;
+}
+
 .menu-nav{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -129,8 +136,8 @@ body{
 /* catalogo central */
 .catalog-section{
     width: 100%;
-    height: 100vh;
-    box-shadow: inset -5px 15px 15px #252525;
+    min-height: 100vh;
+    box-shadow: inset 0 15px 15px #252525;
     background-color: #151515;
     display: flex;
     justify-content: center;
@@ -144,42 +151,90 @@ body{
     padding-top: 2rem;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(8, 170px);
-    grid-template-rows: repeat(8, 170px);
-    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 220px);
+    grid-template-rows: repeat(auto-fill, 280px);
+    overflow: hidden;
+    flex-wrap: wrap;
 }
 /* card dos animes */
 .catalog-section .catalog-div .mini-card{
-    width: 140px;
-    height: 200px;
+    width: 170px;
+    height: 240px;
     background: gray;
     border-radius: .3rem;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    cursor: pointer;
+
 }
+
+.catalog-section .catalog-div .mini-card:hover{
+    box-shadow: 3px 3px 10px #ffffff70;
+    transition: .4s;
+}
+
+.catalog-section .catalog-div .mini-card:hover .description-card {
+    transform: translateY(0px);
+    transition: .5s;
+}
+
+.catalog-section .catalog-div .mini-card:hover .description-text{
+    display: block;
+    display: -webkit-box;
+    transition: .5s;
+    word-wrap: break-word;
+}
+
 /* imagem da card */
 .catalog-section .catalog-div .mini-card img{
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    width: 170px;
+    height: 240px;
     z-index: 0;
+    border-radius: .3rem;
 }
 /* descrição das cards */
 .mini-card .description-card{
-    position: absolute;
+    position: relative;
     width: 100%;
-    z-index: 1;
-
+    height: 100%;
+    z-index: 3;
+    background-color: #25252590;
+    transform: translateY(170px);
+    position: relative;
+    overflow: hidden;
 }
 
-.mini-card .description-card p{
+.mini-card .description-card h5{
+    text-align: center;
+    z-index: 2;
+    font-size: .85rem;
+}
+
+.mini-card .description-card .description-text{
+    padding: 6px;
     display: none;
+    display: -webkit-box; /*display para deixar o conteúdo com ellipsis em várias linhas*/
+    z-index: 2;
+    font-size: .85rem;
+    text-align: justify;
+    max-height: 160px;
+    width: 160px;
+    white-space:pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 9; /* informa a quantidade de linhas que você deseja antes da ellipsis*/
+    -webkit-box-orient: vertical; /*informa a direção que você deseja que aconteça a ellipse*/
 }
 
+/* scroll bar edit */
+::-webkit-scrollbar{
+    background: transparent;
+    width: 10px;
+}
 
-
-
-
-
+::-webkit-scrollbar-thumb{
+    background: grey;
+}
