@@ -158,12 +158,13 @@ body{
     padding-top: 2rem;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 220px);
+    grid-template-columns: repeat(auto-fill, 215px);
     grid-template-rows: repeat(auto-fill, 280px);
     overflow: hidden;
     flex-wrap: wrap;
     box-sizing: border-box;
     padding-bottom: 3rem;
+    justify-content: center;
 }
 /* card dos animes */
 .catalog-section .catalog-div .mini-card{
