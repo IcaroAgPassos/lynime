@@ -58,7 +58,7 @@ body{
 
 .menu-nav ul li:last-child a{
     outline-offset: 2px;
-    padding: 0.3rem 1rem 0.3rem 1rem;
+    padding: 0.3rem 1rem;
     overflow: hidden;
 }
 
@@ -120,11 +120,11 @@ body{
 .section-central .slide-initial h1{
     font-size: 3.5rem;
     -webkit-text-stroke: 3px #000;
+    transition: all ease-out .3s;
 }
 
 .section-central .slide-initial h1:hover{
     scale: 110%;
-    transition: all ease-out .3s;
 }
 
 .section-central .slide-initial p{
@@ -288,4 +288,140 @@ body{
 
 .end-page .socials i:hover{
     transform: scale(1.5);
+}
+
+/* PÁGINA DE LOGIN */
+
+.section-login{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-login .login-page{
+    padding: 1rem;
+    width: 30rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF30;
+    border-radius: 1rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 8px 8px 15px #00000060;
+}
+
+.login-page h2{
+    font-size: 2rem;
+    padding: 0;
+    margin: 0.5rem 0.1rem 1rem 0.1rem;
+}
+
+.input-direction{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-direction label{
+    font-size: 1.1rem;
+}
+
+.login-page input, .register-link{
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    font-size: 1.2rem;
+    outline: none;
+    margin-bottom: .3rem;
+    color: white;
+}
+
+.register-link{
+    border: 2px solid transparent;
+    background-color: #FFFFFF20;
+}
+
+.register-link:hover{
+    border: 2px solid white;
+    transition: .3s;
+
+}
+
+.login-page input[type=text], .login-page input[type=password]{
+    background-color: transparent;
+    border: 2px solid #FFFFFF80;
+}
+
+.login-page input[type=text]:focus, .login-page input[type=password]:focus :not(){
+    border: 2px solid white;
+    transition: .3s;
+}
+
+/* .login-page input:not([type=submit]){
+    background: black;
+} */
+
+.login-page input[type=password]{
+    margin-bottom: 1rem;
+}
+.login-page input[type=submit]{
+    background-color: #f80000;
+    font-weight: 600;
+    color: white;
+    border: 2px solid transparent;
+    outline-offset: 2px;
+    outline: 2px solid transparent;
+}
+.login-page input[type=submit]:hover{
+    transition: .3s;
+    cursor: pointer;
+    outline: 2px solid red;
+}
+
+.access-others{
+    margin-top: 1.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.access-others a{
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    background-color: #FFFFFF20;
+    padding: .8rem .6rem .8rem .6rem;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: .3s;
+}
+
+.access-others a:hover{
+    border: 2px solid white;
+}
+
+.access-others i{
+    position: relative;
+    margin-left: 0.5rem;
+    font-size: 1.7rem;
+    box-sizing:border-box;
+    top: 0.1rem;
+}
+
+.access-others .icon-f{
+    background: -webkit-linear-gradient(137deg, rgba(9,51,121,1) 35%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color:  #FFF;
+    font-weight: 900;
+}
+
+.access-others .icon-g{
+    background: -webkit-linear-gradient(310deg, rgba(180,58,58,1) 25%, rgba(250,151,0,1) 50%, rgba(2,115,19,1) 75% ,rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
 }
