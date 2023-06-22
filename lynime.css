@@ -304,7 +304,7 @@ body{
 .section-login .login-page{
     padding: 1rem;
     width: 30rem;
-    height: 25rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF30;
@@ -320,18 +320,72 @@ body{
     margin: 0.5rem 0.1rem 1rem 0.1rem;
 }
 
-.input-direction{
+.input-direction, .input-direction div{
     text-align: left;
     display: flex;
     flex-direction: column;
 }
 
-.input-direction label{
+.input-direction div label{
     font-size: 1.1rem;
+    position: absolute;
+    padding: .6rem 0.8rem;
+    color: #FFFFFF80;
+    letter-spacing: 0.05rem;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.login-page input, .input-direction input, .login-page a{
+    border-radius: 0.3rem;
+}
+
+.login-page .input-direction input{
+    background-color: transparent;
+    border: 2px solid #FFFFFF80;
+    padding: 0.5rem 0.8rem;
+}
+
+.input-direction div input:focus + label,
+.input-direction div input:valid + label{
+    color: black;
+    background: #FFFFFF;
+    font-size: .8rem;
+    transform: translateX(.7rem) translateY(-0.7rem);
+    border-radius: .2rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.input-direction input:focus{
+    border: 2px solid white;
+    transition: .3s;
+}
+
+/* .login-page input:not([type=submit]){
+    background: black;
+    a utilização do not é pra definir neste caso que "todos os inputs menos o not(que eu desejar) vão receber essa alteração "
+} */
+
+.input-direction div{
+    height: 3.6rem;
+}
+
+.login-page input[type=submit]{
+    background-color: #f80000;
+    font-weight: 600;
+    color: white;
+    border: 2px solid #f80000;
+    outline-offset: 2px;
+    outline: 2px solid transparent;
+}
+.login-page input[type=submit]:hover{
+    transition: .3s;
+    cursor: pointer;
+    outline: 2px solid whitesmoke;
 }
 
 .login-page input, .register-link{
-    padding: 0.5rem 0rem 0.5rem 0rem;
+    padding: 0.5rem 0rem;
     font-size: 1.2rem;
     outline: none;
     margin-bottom: .3rem;
@@ -340,48 +394,17 @@ body{
 
 .register-link{
     border: 2px solid transparent;
-    background-color: #FFFFFF20;
+    background-color: #363636;
 }
 
 .register-link:hover{
     border: 2px solid white;
     transition: .3s;
-
-}
-
-.login-page input[type=text], .login-page input[type=password]{
-    background-color: transparent;
-    border: 2px solid #FFFFFF80;
-}
-
-.login-page input[type=text]:focus, .login-page input[type=password]:focus :not(){
-    border: 2px solid white;
-    transition: .3s;
-}
-
-/* .login-page input:not([type=submit]){
-    background: black;
-} */
-
-.login-page input[type=password]{
-    margin-bottom: 1rem;
-}
-.login-page input[type=submit]{
-    background-color: #f80000;
-    font-weight: 600;
-    color: white;
-    border: 2px solid transparent;
-    outline-offset: 2px;
-    outline: 2px solid transparent;
-}
-.login-page input[type=submit]:hover{
-    transition: .3s;
-    cursor: pointer;
-    outline: 2px solid red;
+    background-color: #5f5f5f34;
 }
 
 .access-others{
-    margin-top: 1.3rem;
+    margin: 1.3rem 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -390,7 +413,7 @@ body{
 .access-others a{
     text-align: center;
     box-sizing: border-box;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 2rem;
     background-color: #FFFFFF20;
     padding: .8rem .6rem .8rem .6rem;
