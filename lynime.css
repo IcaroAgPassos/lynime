@@ -10,6 +10,7 @@ body{
     font-family:'Segoe UI', sans-serif;
     background-color: var(--fundo);
     color: var(--font);
+    overflow-x: none;
 }
 
 .pag{
@@ -69,12 +70,12 @@ body{
     outline-offset: 2px;
     overflow: hidden;
     box-sizing: border-box;
+    transition: background .3s ease-out, box-shadow .3s ease-out;
 }
 
 .menu-nav ul li:last-child:hover{
     background-color: red;
-    box-shadow: 0px 0px 5px red;
-    transition: all .3s ease-out;
+    box-shadow: 0px 0px 8px red;
 }
 
 .menu-nav img{
@@ -293,12 +294,31 @@ body{
 /* PÁGINA DE LOGIN */
 
 .section-login{
-    display: flex;
-    width: 100vw;
+    display: none;
+    width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     align-items: center;
     justify-content: center;
+    z-index: 5;
+    background-color: #00000090;
+    backdrop-filter: blur(10px);
+}
+
+.section-login:target{
+    display: flex;
+    -webkit-animation-name:backview-login;
+    -webkit-animation-duration: .5s;
+
+}
+
+@-webkit-keyframes backview-login{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .section-login .login-page{
@@ -318,6 +338,20 @@ body{
     font-size: 2rem;
     padding: 0;
     margin: 0.5rem 0.1rem 1rem 0.1rem;
+}
+
+.login-page .btn-close{
+    padding: 0 1rem 0.5rem 1rem;
+    right: 0;
+    top: 0;
+    position: absolute;
+    font-size: 2rem;
+    transition: transform .3s, color .2s;
+    font-weight: 700;
+}
+
+.login-page .btn-close:hover{
+    color: #f80000;
 }
 
 .input-direction, .input-direction div{
@@ -347,7 +381,8 @@ body{
 }
 
 .input-direction div input:focus + label,
-.input-direction div input:valid + label{
+.input-direction div input:valid + label,
+.input-direction div input:not(:placeholder-shown) + label{ /*permite que a label volte somente se o placeholder estiver por lá, caso ele não esteja, ela vai ficar no posicionamento do focus*/
     color: black;
     background: #FFFFFF;
     font-size: .8rem;
