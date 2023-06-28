@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/img/rotate logo.svg">
     <link rel="stylesheet" href="lynime.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
     <title>LYNIME Online</title>
 </head>
 <body>
@@ -28,20 +28,50 @@
                 </div>
             </div>
             <input type="submit" value="Entrar">
-            <a href="" class="register-link">Registrar-se</a>
+            <a href="#s-register" class="register-link">Registrar-se</a>
             <div class="access-others">
-                <a href="">Entrar com Google<i class="fa-brands fa-google icon-g"></i></a>
-                <a href="">Entrar com Facebook<i class="fa-brands fa-facebook icon-f"></i></a>
+                <a href="" class="btn-others">Entrar com Google<i class="fa-brands fa-google icon-g"></i></a>
+                <a href="" class="btn-others">Entrar com Facebook<i class="fa-brands fa-facebook icon-f"></i></a>
             </div>
         </div>
     </section>
+    <section class="section-login s-register" id="s-register">
+        <form class="login-page register-page">
+            <h2>Faça seu Cadastro</h2>
+            <a href="#" class="btn-close">x</a>
+            <div class="input-direction">
+                <div>
+                    <input type="email" required id="email" placeholder=" ">
+                    <label for="email">Email</label>
+                </div>
+                <div>
+                    <input type="password" required id="password" placeholder=" ">
+                    <label for="password">Senha</label>
+                </div>
+                <div>
+                    <input type="password" required id="passwordConfirm" placeholder=" ">
+                    <label id="lblPasswordConfirm" for="passwordConfirm">Confirmar Senha</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="check">
+                    <p>Consente em receber e-mails semanalmente sobre atualizaçoes de animes</p>
+                </div>
+            </div>
+            <input type="submit" value="Confirmar" onclick="verificarSenha();">
+            <a href="#section-login" class="return-login">Já tem cadastro? Clique aqui para entrar então!</a>
+            <div class="access-others register-others">
+                <a href="" class="btn-others">Cadastrar com Google<i class="fa-brands fa-google icon-g"></i></a>
+                <a href="" class="btn-others">Cadastrar com Facebook<i class="fa-brands fa-facebook icon-f"></i></a>
+            </div>
+        </form>
+    </section>
     <header class="cabecalho">
         <nav class="menu-nav">
-            <img src="rotate logo.svg" alt="">
+            <img src="rotate logo.svg" alt="L">
             <ul>
                 <li><a href="">Art's</a></li>
                 <li><a href="">Templates</a></li>
-                <li><a href="">Sing Up</a></li>
+                <li><a href="#s-register">Sing Up</a></li>
                 <li><a href="#section-login">Login</a></li>
             </ul>
         </nav>
@@ -131,5 +161,6 @@
             <a href="https://www.facebook.com/profile.php?id=100011393291721" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
