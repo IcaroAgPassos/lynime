@@ -10,7 +10,6 @@ body{
     font-family:'Segoe UI', sans-serif;
     background-color: var(--fundo);
     color: var(--font);
-    overflow-x: none;
 }
 
 .pag{
@@ -31,6 +30,22 @@ body{
 
 }
 
+.cabecalho.down-scroll{
+    background-color: var(--fundo);
+}
+
+.cabecalho .menu-recursive{
+    display: none;
+    border: 2px solid red;
+    font-size: 1.7rem;
+    padding: .5rem;
+    box-sizing: border-box;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: background .3s ease-out, box-shadow .3s ease-out;
+
+}
+
 .menu-nav{
     position: relative;
     display: flex;
@@ -42,15 +57,11 @@ body{
     z-index: 2;
 }
 
-.cabecalho.ativo{
-    background-color: var(--fundo);
-}
-
 .menu-nav ul{
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    gap: 29px;
+    gap: 1.9rem;
 }
 
 .menu-nav ul li ,a{
@@ -78,7 +89,7 @@ body{
     transition: background .3s ease-out, box-shadow .3s ease-out;
 }
 
-.menu-nav ul li:last-child:hover{
+.menu-nav ul li:last-child:hover, .cabecalho .menu-recursive:hover{
     background-color: red;
     box-shadow: 0px 0px 8px red;
 }
@@ -557,4 +568,58 @@ body{
 .s-register .return-login:hover{
     color: #f80000;
     text-decoration:underline;
+}
+
+/* RESPONSIVIDADE */
+
+/* RESPONSIVIDADE LIGADA AO SLIDE CENTRAL */
+
+@media only screen and (max-width: 950px){
+
+    .section-central .slide-initial{
+        width: 800px;
+        height: 450px;
+    }
+
+    .section-central .slide-initial h1{
+        font-size: 3.5rem;
+        -webkit-text-stroke: 3px #000;
+        transition: all ease-out .3s;
+}   
+    .section-central .slide-initial p{
+        margin-top: 0;
+        font-size: 2rem;
+        color: #fff;
+        font-weight: 600;
+        width: 70%;
+        text-align: center;
+        word-wrap: break-word;
+    }
+}
+
+/* RESPONSIVIDADE LIGADA AO MENU */
+
+@media only screen and (max-width: 900px){
+    .cabecalho .menu-recursive{
+        display: block;
+    }
+
+    .menu-nav ul{
+        display: block;
+        position: absolute;
+        transform: translateX(1000px);
+    }
+
+    .menu-nav{
+        overflow: none;
+    }
+
+    /* ativação do menu no JS */
+    .menu-nav ul.menu-active{
+        display: block;
+        flex-flow: row nowrap;
+        position: absolute;
+        z-index: 6;
+    }
+   
 }

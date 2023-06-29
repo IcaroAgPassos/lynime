@@ -1,7 +1,6 @@
 function activeScroll (event){
     const menu = document.querySelector('.cabecalho');
-    menu.classList.toggle('ativo', scrollY > 0);
-    console.log(window.scrollY);
+    menu.classList.toggle('down-scroll', scrollY > 0);
 }
 
 window.addEventListener('scroll', activeScroll);
@@ -12,7 +11,7 @@ function verificarSenha() {
 
     if (password !== confPassword) {
         let borderColor = document.getElementById('passwordConfirm').style.borderColor;
-        let conteudo = document.getElementById('lblPasswordConfirm').innerHTML = 'Senha Incorreta!!';
+        let conteudo = document.getElementById('lblPasswordConfirm').innerHTML;
         document.getElementById('passwordConfirm').style.borderColor = '#f80000';
         document.getElementById('lblPasswordConfirm').innerHTML = 'Senha Incorreta!!';
 
@@ -20,4 +19,10 @@ function verificarSenha() {
         document.getElementById('passwordConfirm').style.borderColor = borderColor;
         document.getElementById('lblPasswordConfirm').innerHTML = conteudo;
     }
+}
+
+function openMenu(){
+
+    const menuActive = document.querySelector('.menu-nav ul');
+    menuActive.classList.toggle('.menu-active', focus !== true);
 }
