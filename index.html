@@ -66,6 +66,16 @@
         </form>
     </section>
     <header class="cabecalho">
+        <div class="div-list-menu" id="menuRecursive">
+            <a onclick="closeMenuRecursive();" class="btn-close-menu-recursive">X</a>
+            <ul>
+                <li><a href="">Art's</a></li>
+                <li><a href="">Templates</a></li>
+                <li><a href="#s-register">Sing Up</a></li>
+                <li><a href="#section-login">Login</a></li>
+            </ul>
+        </div>
+        
         <nav class="menu-nav">
             <img src="rotate logo.svg" alt="L">
             <ul>
@@ -74,7 +84,7 @@
                 <li><a href="#s-register">Sing Up</a></li>
                 <li><a href="#section-login">Login</a></li>
             </ul>
-            <i class="fa-solid fa-bars menu-recursive" onclick="openMenu();"></i>
+            <i class="fa-solid fa-bars btn-open-menu-recursive" onclick="openMenuRecursive();"></i>
         </nav>
     </header>
     <main>

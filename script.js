@@ -21,8 +21,10 @@ function verificarSenha() {
     }
 }
 
-function openMenu(){
+function openMenuRecursive(){
+    document.getElementById('menuRecursive').style.transform = ('translateX(0)');
+}
 
-    const menuActive = document.querySelector('.menu-nav ul');
-    menuActive.classList.toggle('.menu-active', focus !== true);
+function closeMenuRecursive(){
+    document.getElementById('menuRecursive').style.transform = ('translateX(100%)')
 }
