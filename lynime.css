@@ -117,8 +117,8 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 900px;
-    height: 500px;
+    width: 60%;
+    height: 70%;
     align-items: center;
     justify-content: center;
     border-radius: 40px;
@@ -126,6 +126,7 @@ body{
     z-index: 1;
     overflow: hidden;
     box-shadow: 10px 10px 20px #00000060;
+    transition: widht .3s, height .3s;
 }
 
 .section-central .slide-initial img{
@@ -166,6 +167,7 @@ body{
     background-color: #151515;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     overflow: hidden;
     
@@ -179,16 +181,18 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fill, 215px);
     grid-template-rows: repeat(auto-fill, 280px);
+    gap: 1.5rem;
     overflow: hidden;
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
+    justify-items: center;
     justify-content: center;
 }
 /* card dos animes */
 .catalog-section .catalog-div .mini-card{
-    width: 170px;
-    height: 240px;
+    width: 215px;
+    height: 280px;
     background: gray;
     border-radius: .3rem;
     overflow: hidden;
@@ -197,32 +201,20 @@ body{
     justify-content: flex-end;
     cursor: pointer;
     box-shadow: 2px 2px 8px #252525;
+    margin: 0;
 }
 
 .catalog-section .catalog-div .mini-card:hover{
     box-shadow: 2px 2px 8px #ffffff70;
     transform:scale(1.05);
     transition: .4s;
-
-}
-
-.catalog-section .catalog-div .mini-card:hover .description-card {
-    transform: translateY(0px);
-    transition: .5s;
-}
-
-.catalog-section .catalog-div .mini-card:hover .description-text{
-    display: block;
-    display: -webkit-box;
-    transition: .5s;
-    word-wrap: break-word;
 }
 
 /* imagem da card */
 .catalog-section .catalog-div .mini-card img{
     position: absolute;
-    width: 170px;
-    height: 240px;
+    width: 215px;
+    height: 280px;
     z-index: 0;
     border-radius: .3rem;
 }
@@ -233,7 +225,7 @@ body{
     height: 100%;
     z-index: 3;
     background-color: #25252590;
-    transform: translateY(170px);
+    transform: translateY(215px);
     position: relative;
     overflow: hidden;
 }
@@ -258,17 +250,28 @@ body{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    display: none;
     display: -webkit-box; /*display para deixar o conteúdo com ellipsis em várias linhas*/
     z-index: 2;
     font-size: .85rem;
     text-align: justify;
-    max-height: 160px;
-    width: 160px;
+    max-height: 100%;
+    width: 80%;
     white-space:pre-wrap;
     overflow: hidden;
     -webkit-line-clamp: 9; /* informa a quantidade de linhas que você deseja antes da ellipsis*/
     -webkit-box-orient: vertical; /*informa a direção que você deseja que aconteça a ellipse*/
+}
+
+.catalog-section .catalog-div .mini-card:hover .description-card {
+    transform: translateY(0px);
+    transition: .5s;
+}
+
+.catalog-section .catalog-div .mini-card:hover .description-text{
+    display: block;
+    display: -webkit-box;
+    transition: .5s;
+    word-wrap: break-word;
 }
 
 /* scroll bar edit */
@@ -572,34 +575,10 @@ body{
 
 /* RESPONSIVIDADE */
 
-/* RESPONSIVIDADE LIGADA AO SLIDE CENTRAL */
+@media only screen and (max-width: 1024px){
 
-@media only screen and (max-width: 950px){
+    /* RESPONSIVIDADE LIGADA AO MENU */
 
-    .section-central .slide-initial{
-        width: 800px;
-        height: 450px;
-    }
-
-    .section-central .slide-initial h1{
-        font-size: 3.5rem;
-        -webkit-text-stroke: 3px #000;
-        transition: all ease-out .3s;
-}   
-    .section-central .slide-initial p{
-        margin-top: 0;
-        font-size: 2rem;
-        color: #fff;
-        font-weight: 600;
-        width: 70%;
-        text-align: center;
-        word-wrap: break-word;
-    }
-}
-
-/* RESPONSIVIDADE LIGADA AO MENU */
-
-@media only screen and (max-width: 900px){
     .menu-nav ul{
         display: none;
     }
@@ -658,10 +637,91 @@ body{
     .div-list-menu .btn-close-menu-recursive:hover{
         color: #f80000;
     }
+
+    /* RESPONSIVIDADE LIGADA AO SLIDE CENTRAL */
+
+    .section-central .slide-initial{
+        width: 70%;
+        height: 60%;
+    }
+
+    .section-central .slide-initial h1{
+        font-size: 3rem;
+        transition: all ease-out .3s;
+}   
+    .section-central .slide-initial p{
+        font-size: 2rem;
+    }
+
+    .section-central .slide-initial h1{
+        font-size: 2.6rem;
+        transition: all ease-out .3s;
+}   
+    .section-central .slide-initial p{
+        margin-top: 0;
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 600;
+        width: 70%;
+        text-align: center;
+        word-wrap: break-word;
+    }
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 768px){
     .div-list-menu{
         width: 100%;
+    }
+
+    .section-central .slide-initial{
+        width: 85%;
+        height: 60%;
+    }
+
+    .section-central .slide-initial h1{
+        font-size: 2.2rem;
+        -webkit-text-stroke: 2px #000;
+}   
+    .section-central .slide-initial p{
+        font-size: 1.2rem;
+    }
+
+    /* CATALOGO DE ANIMES */
+
+    .catalog-section .catalog-div{
+        grid-template-columns: repeat(auto-fill, 170px);
+        grid-template-rows: repeat(auto-fill, 200px);
+        gap: 1rem;
+    }
+    /* card dos animes */
+    .catalog-section .catalog-div .mini-card{
+        width: 170px;
+        height: 200px;
+    }
+
+    .catalog-section .catalog-div .mini-card img{
+        width: 170px;
+        height: 200px;
+    }
+
+    .mini-card .description-card{
+        transform: translateY(130px);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .section-central .slide-initial{
+        width: 85%;
+        height: 45%;
+    }
+
+    .section-central .slide-initial h1{
+        font-size: 1.8rem;
+        -webkit-text-stroke: 1px #000;
+
+}   
+    .section-central .slide-initial p{
+        font-size: 1.2rem;
+        width: 70%;
     }
 }
