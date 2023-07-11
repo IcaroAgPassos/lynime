@@ -785,6 +785,36 @@ body{
     width: 85%;
 }
 
+.login-page h2{
+    font-size: 1.7rem;
+}
+
+.login-page input, .input-direction input, .login-page a{
+    font-size: 1rem;
+}
+
+.login-page .input-direction input{
+    background-color: transparent;
+    border: 2px solid #FFFFFF80;
+    padding: 0.5rem 0.8rem;
+}
+
+.input-direction div label{
+    font-size: 1rem;
+    position: absolute;
+    padding: .5rem 0.8rem;
+}
+
+/* LIGADA AO REGISTRO */
+
+.s-register .register-others a{
+    font-size: 1rem;
+}
+
+.s-register .return-login{
+    font-size: 1rem;
+}
+
 /* RESPONSIVIDADE LIGADA A PÁGINA DE ARTES */
 
     .div-arts{
