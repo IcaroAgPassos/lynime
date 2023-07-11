@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/img/rotate logo.svg">
+        <link rel="stylesheet" href="lynime.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+        <title>LYNIME Online</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <section class="section-login" id="section-login">
+            <div class="login-page">
+                <header>
+                    <h2>Faça seu login</h2>
+                    <a href="#" class="btn-close">x</a>
+                </header>
+                <div class="input-direction">
+                    <div class="e-form">
+                        <input type="email" required id="emailLogin" placeholder=" ">
+                        <label for="emailLogin">Email</label>
+                    </div>
+
+                    <div class="p-form">
+                        <input type="password" required id="passwordLogin" placeholder=" ">
+                        <label for="passwordLogin">Senha</label>
+                    </div>
+                </div>
+                <input type="submit" value="Entrar">
+                <a href="#s-register" class="register-link">Registrar-se</a>
+                <div class="access-others">
+                    <a href="" class="btn-others">Entrar com Google<i class="fa-brands fa-google icon-g"></i></a>
+                    <a href="" class="btn-others">Entrar com Facebook<i class="fa-brands fa-facebook icon-f"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="section-login s-register" id="s-register">
+            <form class="login-page register-page">
+                <h2>Faça seu Cadastro</h2>
+                <a href="#" class="btn-close">x</a>
+                <div class="input-direction">
+                    <div>
+                        <input type="email" required id="email" placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                    <div>
+                        <input type="password" required id="password" placeholder=" ">
+                        <label for="password">Senha</label>
+                    </div>
+                    <div>
+                        <input type="password" required id="passwordConfirm" placeholder=" ">
+                        <label id="lblPasswordConfirm" for="passwordConfirm">Confirmar Senha</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="check">
+                        <p>Consente em receber e-mails semanalmente sobre atualizaçoes de animes</p>
+                    </div>
+                </div>
+                <input type="submit" value="Confirmar" onclick="verificarSenha();">
+                <a href="#section-login" class="return-login">Já tem cadastro? Clique aqui para entrar então!</a>
+                <div class="access-others register-others">
+                    <a href="" class="btn-others">Cadastrar com Google<i class="fa-brands fa-google icon-g"></i></a>
+                    <a href="" class="btn-others">Cadastrar com Facebook<i class="fa-brands fa-facebook icon-f"></i></a>
+                </div>
+            </form>
+        </section>
+        <header class="cabecalho">
+            <div class="div-list-menu" id="menuRecursive">
+                <a onclick="closeMenuRecursive();" class="btn-close-menu-recursive">X</a>
+                <ul>
+                    <li><a href="">Artes</a></li>
+                    <li><a href="#s-register">Cadastre-se</a></li>
+                    <li><a href="#section-login">Login</a></li>
+                </ul>
+            </div>
+            <nav class="menu-nav">
+                <img src="rotate logo.svg" alt="L">
+                <ul>
+                    <li><a href="arts.html">Artes</a></li>
+                    <li><a href="#s-register">Cadastre-se</a></li>
+                    <li><a href="#section-login">Login</a></li>
+                </ul>
+                <i class="fa-solid fa-bars btn-open-menu-recursive" onclick="openMenuRecursive();"></i>
+            </nav>
+        </header>
+        <main class="main-arts">
+            <h1>Galeria de Artes</h1>
+            <section class="section-arts">
+                <div class="div-arts">
+                    <a href="https://pop.proddigital.com.br/wp-content/uploads/sites/8/2021/05/jujutsu-kaisen.jpg"><img src="https://pop.proddigital.com.br/wp-content/uploads/sites/8/2021/05/jujutsu-kaisen.jpg" alt="" class="image"></a>
+                <a href="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/47efe819e954f83cf0b8e022c39488ce.jpe"><img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/47efe819e954f83cf0b8e022c39488ce.jpe" alt="" class="image"></a>
+                <a href="https://img.quizur.com/f/img60d4e02b5a4259.81527118.jpeg?lastEdited=1624563764"><img src="https://img.quizur.com/f/img60d4e02b5a4259.81527118.jpeg?lastEdited=1624563764" alt="" class="image"></a>
+                <a href="https://img.elo7.com.br/product/original/30FF258/placa-decorativa-mdf-anime-naruto-039-anbu-kakashi.jpg"><img src="https://img.elo7.com.br/product/original/30FF258/placa-decorativa-mdf-anime-naruto-039-anbu-kakashi.jpg" alt="" class="image"></a>
+                <a href="https://i0.wp.com/www.otakupt.com/wp-content/uploads/2022/03/Spy-x-Family-anime-visuals-3-scaled.jpg?resize=1809%2C2560&ssl=1"><img src="https://i0.wp.com/www.otakupt.com/wp-content/uploads/2022/03/Spy-x-Family-anime-visuals-3-scaled.jpg?resize=1809%2C2560&ssl=1" alt="" class="image"></a>
+                <a href="https://pbs.twimg.com/profile_images/1356824377694834689/c8dg1cHW_400x400.jpg"><img src="https://pbs.twimg.com/profile_images/1356824377694834689/c8dg1cHW_400x400.jpg" alt="" class="image"></a>
+                <a href="https://cdn.ome.lt/W3hbrzUJLTAuGyhOM8pF_lr-V-0=/1200x630/smart/extras/conteudos/mashle-capa-omelete.jpg"><img src="https://cdn.ome.lt/W3hbrzUJLTAuGyhOM8pF_lr-V-0=/1200x630/smart/extras/conteudos/mashle-capa-omelete.jpg" alt="" class="image"></a>
+                <a href="https://niisansproducoesgeek.com/wp-content/uploads/2022/01/Jujutsu-Kaisen-Yuji-Itadori.png"><img src="https://niisansproducoesgeek.com/wp-content/uploads/2022/01/Jujutsu-Kaisen-Yuji-Itadori.png" alt="" class="image"></a>
+                <a href="https://s.aficionados.com.br/imagens/jujutsu-kaisen-2_cke.jpg"><img src="https://s.aficionados.com.br/imagens/jujutsu-kaisen-2_cke.jpg" alt="" class="image"></a>
+                <a href="https://i0.wp.com/otakubfx.com.br/wp-content/uploads/2021/04/melhores-animes-de-comedia-romantica-atuais-4.jpg?fit=1000%2C528&ssl=1"><img src="https://i0.wp.com/otakubfx.com.br/wp-content/uploads/2021/04/melhores-animes-de-comedia-romantica-atuais-4.jpg?fit=1000%2C528&ssl=1" alt="" class="image"></a>
+                <a href="https://niisansproducoesgeek.com/wp-content/uploads/2022/01/Orange.jpg"><img src="https://niisansproducoesgeek.com/wp-content/uploads/2022/01/Orange.jpg" alt="" class="image"></a>
+                <a href="https://gkpb.com.br/wp-content/uploads/2022/12/Hells-Paradise.jpg"><img src="https://gkpb.com.br/wp-content/uploads/2022/12/Hells-Paradise.jpg" alt="" class="image"></a>
+                <a href="https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/09/My-Hero-Academia-1024x576.webp?resize=1024%2C576&ssl=1"><img src="https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/09/My-Hero-Academia-1024x576.webp?resize=1024%2C576&ssl=1" alt="" class="image"></a>
+                <a href="https://ovicio.com.br/wp-content/uploads/2022/03/20220320-ovicio-one-piece-anime-luffy-730x365.jpg"><img src="https://ovicio.com.br/wp-content/uploads/2022/03/20220320-ovicio-one-piece-anime-luffy-730x365.jpg" alt="" class="image"></a>
+                <a href="https://vocesabianime.com/wp-content/uploads/2023/04/Oshi_no_Ko_e_o_Anime_com_Mais_Notas_1_da_Atual_Temporada-800x418-1.jpg"><img src="https://vocesabianime.com/wp-content/uploads/2023/04/Oshi_no_Ko_e_o_Anime_com_Mais_Notas_1_da_Atual_Temporada-800x418-1.jpg" alt="" class="image"></a>
+                <a href="https://i0.wp.com/geekpopnews.com.br/wp-content/uploads/2022/02/Dororo.jpg?resize=290%2C478&ssl=1"><img src="https://i0.wp.com/geekpopnews.com.br/wp-content/uploads/2022/02/Dororo.jpg?resize=290%2C478&ssl=1" alt="" class="image"></a>
+                <a href="https://criticalhits.com.br/wp-content/uploads/2023/01/Jujutsu-Kaisen-Itadori-Using-D.png"><img src="https://criticalhits.com.br/wp-content/uploads/2023/01/Jujutsu-Kaisen-Itadori-Using-D.png" alt="" class="image"></a>
+                <a href="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/03/03/new-pokemon-anime-s1b6odmcjbl0.png"><img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/03/03/new-pokemon-anime-s1b6odmcjbl0.png" alt="" class="image"></a>
+                </div>
+            </section>
+        </main>
+        <footer class="end-page">
+            <p>© 2023 For Icaro Passos. All Rights reserved</p>
+            <div class="socials">
+                <a href="https://www.instagram.com/_icaro.ag/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/icaro-ag-184842175/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/IcaroAgPassos/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100011393291721" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </footer>
+    </body>
+</html>

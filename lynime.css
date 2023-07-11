@@ -157,6 +157,7 @@ body{
     word-wrap: break-word;
 }
 /*ANIMES CATALOGO*/
+
 /* catalogo central */
 .catalog-section{
     width: 100%;
@@ -573,6 +574,49 @@ body{
     accent-color: #f80000;
 }
 
+/* ARTS.HTML PART */
+
+.main-arts{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.main-arts h1{
+    font-size: 3vw;
+    text-align: center;
+}
+
+
+.section-arts{
+    display: flex;
+    justify-content: center;
+}
+
+.div-arts{
+    display: flex;
+    gap: .4rem;
+    flex-flow: row wrap;
+    width: 85%;
+    justify-content:center;
+}
+
+.div-arts a{
+    display: flex;
+    justify-content: center;
+    max-width: 310px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: .5rem;
+    border: 2px solid #363636;
+    padding: 0;
+    margin: 0;
+    transition: transform .3s;
+}
+
+.div-arts a:hover{
+    transform: scale(1.03);
+}
+
 /* RESPONSIVIDADE */
 
 @media only screen and (max-width: 1024px){
@@ -603,16 +647,17 @@ body{
         width: 100%;
         flex-direction: column;
         list-style-type: none;
-        text-align: center;
         padding-inline-start: 0;
         box-sizing: border-box;
         margin-top: 4rem;
     }
     
     .div-list-menu ul li{
-        padding: 1rem;
-        box-sizing: border-box;
+        height: 4rem;
+        width: 100%;
+        /* box-sizing: border-box; */
         transition: background .3s;
+        display: flex;
     }
     
     .div-list-menu ul li:last-child:hover{
@@ -620,7 +665,9 @@ body{
     }
     
     .div-list-menu ul li a{
-        padding: 1rem;
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0 3rem 0;
     }
     
     .div-list-menu .btn-close-menu-recursive{
@@ -665,6 +712,13 @@ body{
         width: 70%;
         text-align: center;
         word-wrap: break-word;
+    }
+
+    /* RESPONSIVIDADE LIGADA A PÁGINA DE ARTES */
+
+    .div-arts a{
+        max-width: 240px;
+        height: 160px;
     }
 }
 
@@ -723,5 +777,23 @@ body{
     .section-central .slide-initial p{
         font-size: 1.2rem;
         width: 70%;
+    }
+
+/* RESPONSIVIDADE LIGADA AO LOGIN */
+
+.section-login .login-page{
+    width: 85%;
+}
+
+/* RESPONSIVIDADE LIGADA A PÁGINA DE ARTES */
+
+    .div-arts{
+        gap: .3rem;
+        width: 90%;
+    }
+
+    .div-arts a{
+        max-width: 150px;
+        height: 160px;
     }
 }
