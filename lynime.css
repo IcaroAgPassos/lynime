@@ -3,7 +3,7 @@
     --font: #fff;
     --fundo: #252525;
     --menu-fundo:#ffffff60;
-    --fundo-efeito-scroll:rgba(0, 0, 0, 0.5);
+    --fundo-menu-scroll-:rgba(0,0,0,0.6);
 }
 
 body{
@@ -28,12 +28,10 @@ body{
     z-index: 1000;
     background-color: #ffffff10;
     transition: background .3s;
-
 }
 
 .cabecalho.down-scroll{
-    background-color: var(--fundo-efeito-scroll);
-    backdrop-filter: blur(8px);
+    background-color: var(--fundo-menu-scroll-);
 }
 
 .menu-nav{
@@ -45,6 +43,12 @@ body{
     height: 100%;
     width: 85%;
     z-index: 2;
+}
+
+.menu-nav .btn-home{
+    position: relative;
+    top: 17%;
+    cursor: pointer;
 }
 
 .menu-nav .btn-open-menu-recursive{
@@ -94,18 +98,9 @@ body{
     box-shadow: 0 0 8px #f80000;
 }
 
-.menu-nav .btn-home{
-    position: relative;
-    overflow: hidden;
-    top: 17%;
-}
-
-.menu-nav .btn-home img{
-    position: relative;
+.menu-nav img{
     width: 100px;
     height: 100px;
-    top: 15%;
-    cursor: pointer;
 }
 
 .div-list-menu{
@@ -134,7 +129,7 @@ body{
     z-index: 1;
     overflow: hidden;
     box-shadow: 10px 10px 20px #00000060;
-    transition: width .3s, height .3s;
+    transition: widht .3s, height .3s;
 }
 
 .section-central .slide-initial img{
@@ -172,25 +167,24 @@ body{
     min-height: 100vh;
     box-shadow: inset 0 15px 15px -5px #252525,
                 inset 0 -15px 15px #252525;
-
     background-color: #151515;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     overflow: hidden;
-    
 }
 
 .catalog-section .title-catalog-section{
-    font-size: 2.5rem;
-    padding: 1rem 0 1rem 0;
     margin: 0;
+    padding: 1.2rem 0;
+    font-size: 3vw;
 }
 
 .catalog-section .title-catalog-section span{
     color: #f80000;
 }
+
 /* catalogo das cards dentro da section central */
 .catalog-section .catalog-div{
     width: 85%;
@@ -200,7 +194,6 @@ body{
     grid-template-columns: repeat(auto-fill, 215px);
     grid-template-rows: repeat(auto-fill, 280px);
     gap: 1.5rem;
-    overflow: hidden;
     flex-wrap: wrap;
     box-sizing: border-box;
     padding-bottom: 2rem;
@@ -603,6 +596,10 @@ body{
     text-align: center;
 }
 
+.main-arts h1 span{
+    color: #f80000;
+}
+
 
 .section-arts{
     display: flex;
@@ -651,17 +648,17 @@ body{
         display: flex;
         position: fixed;
         width: 30%;
+        background-color: #363636;
         right: 0;
         height: 100vh;
+        backdrop-filter: blur(10px);
         transform: translateX(100%);
         transition: transform .5s;
         z-index: 10;
-        background-color: #363636;
     }
     
     .div-list-menu ul{
         width: 100%;
-        height: 100%;
         flex-direction: column;
         list-style-type: none;
         padding-inline-start: 0;
@@ -672,6 +669,7 @@ body{
     .div-list-menu ul li{
         height: 4rem;
         width: 100%;
+        /* box-sizing: border-box; */
         transition: background .3s;
         display: flex;
     }
@@ -757,6 +755,11 @@ body{
     }
 
     /* CATALOGO DE ANIMES */
+    
+    .catalog-section .title-catalog-section{
+        font-size: 6vw;
+        padding: 1.5rem 0;
+    }
 
     .catalog-section .catalog-div{
         grid-template-columns: repeat(auto-fill, 170px);
