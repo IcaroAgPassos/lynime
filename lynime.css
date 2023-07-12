@@ -3,6 +3,7 @@
     --font: #fff;
     --fundo: #252525;
     --menu-fundo:#ffffff60;
+    --fundo-efeito-scroll:rgba(0, 0, 0, 0.5);
 }
 
 body{
@@ -31,7 +32,8 @@ body{
 }
 
 .cabecalho.down-scroll{
-    background-color: var(--fundo);
+    background-color: var(--fundo-efeito-scroll);
+    backdrop-filter: blur(8px);
 }
 
 .menu-nav{
@@ -92,7 +94,13 @@ body{
     box-shadow: 0 0 8px #f80000;
 }
 
-.menu-nav img{
+.menu-nav .btn-home{
+    position: relative;
+    overflow: hidden;
+    top: 17%;
+}
+
+.menu-nav .btn-home img{
     position: relative;
     width: 100px;
     height: 100px;
@@ -108,7 +116,7 @@ body{
     position:relative;
     display: flex;
     width: 100%;
-    height: calc(100vh - 4.5rem);
+    height: calc(85vh);
     justify-content: center;
     align-items:center;
 }
@@ -126,7 +134,7 @@ body{
     z-index: 1;
     overflow: hidden;
     box-shadow: 10px 10px 20px #00000060;
-    transition: widht .3s, height .3s;
+    transition: width .3s, height .3s;
 }
 
 .section-central .slide-initial img{
@@ -173,11 +181,20 @@ body{
     overflow: hidden;
     
 }
+
+.catalog-section .title-catalog-section{
+    font-size: 2.5rem;
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+}
+
+.catalog-section .title-catalog-section span{
+    color: #f80000;
+}
 /* catalogo das cards dentro da section central */
 .catalog-section .catalog-div{
     width: 85%;
     height: 100%;
-    padding-top: 2rem;
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, 215px);
@@ -634,17 +651,17 @@ body{
         display: flex;
         position: fixed;
         width: 30%;
-        background-color: #00000050;
         right: 0;
         height: 100vh;
-        backdrop-filter: blur(10px);
         transform: translateX(100%);
         transition: transform .5s;
         z-index: 10;
+        background-color: #363636;
     }
     
     .div-list-menu ul{
         width: 100%;
+        height: 100%;
         flex-direction: column;
         list-style-type: none;
         padding-inline-start: 0;
@@ -655,7 +672,6 @@ body{
     .div-list-menu ul li{
         height: 4rem;
         width: 100%;
-        /* box-sizing: border-box; */
         transition: background .3s;
         display: flex;
     }
