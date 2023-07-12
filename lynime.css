@@ -761,6 +761,12 @@ body{
         padding: 1.5rem 0;
     }
 
+    /* alteração ligada ao H1 da pagina de artes */
+    
+    .main-arts h1{
+        font-size: 6vw;
+    }
+
     .catalog-section .catalog-div{
         grid-template-columns: repeat(auto-fill, 170px);
         grid-template-rows: repeat(auto-fill, 200px);
